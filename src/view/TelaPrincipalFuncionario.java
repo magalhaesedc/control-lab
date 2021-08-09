@@ -29,6 +29,14 @@ import static javax.swing.JOptionPane.YES_NO_OPTION;
 import javax.swing.table.DefaultTableModel;
 import model.Feedback;
 import model.Funcionario;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+ 
+
 
 /**
  *
@@ -58,11 +66,13 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
         txt_nomeFuncionarioConsReserva.setText(controleVariaveis.getNomeTop());
         txt_nomeFuncionarioRealFeedback.setText(controleVariaveis.getNomeTop());
         txt_nomeFuncionarioOpcoes.setText(controleVariaveis.getNomeTop());
+        txt_nomeFuncionarioAjuda.setText(controleVariaveis.getNomeTop());
         txt_siapeConsFeedback.setText(controleVariaveis.getSiapeTop());
         txt_siapeCadReserva.setText(controleVariaveis.getSiapeTop());
         txt_siapeConsReserva.setText(controleVariaveis.getSiapeTop());
         txt_siapeRealFeedback.setText(controleVariaveis.getSiapeTop());
         txt_siapeOpcoes.setText(controleVariaveis.getSiapeTop());
+        txt_siapeAjuda.setText(controleVariaveis.getSiapeTop());
     }
 
     /**
@@ -146,6 +156,22 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         txt_nomeFuncionarioOpcoes = new javax.swing.JLabel();
         txt_siapeOpcoes = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        txt_nomeFuncionarioAjuda1 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda2 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda3 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda4 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda5 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda6 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda7 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda8 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda9 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda10 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        txt_nomeFuncionarioAjuda = new javax.swing.JLabel();
+        txt_siapeAjuda = new javax.swing.JLabel();
 
         cancelarReserva.setText("jMenuItem1");
         cancelarReserva.addActionListener(new java.awt.event.ActionListener() {
@@ -410,7 +436,7 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addContainerGap(469, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cadastrar Reserva", new javax.swing.ImageIcon(getClass().getResource("/view/imagens/iconeCadastrarReserva.png")), jPanel1); // NOI18N
@@ -527,7 +553,7 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 23, Short.MAX_VALUE)
+                .addGap(0, 38, Short.MAX_VALUE)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 848, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -675,7 +701,7 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
                             .addComponent(txt_siapeRealFeedback))
                         .addGap(210, 210, 210)
                         .addComponent(jLabel6)))
-                .addContainerGap(472, Short.MAX_VALUE))
+                .addContainerGap(487, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Realizar Feedback", new javax.swing.ImageIcon(getClass().getResource("/view/imagens/iconeRealizarFeedback.png")), jPanel4); // NOI18N
@@ -751,7 +777,7 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
                         .addComponent(txt_siapeConsFeedback))
                     .addComponent(bt_atualizar))
                 .addGap(15, 15, 15)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("ConsultarFeedBack's", new javax.swing.ImageIcon(getClass().getResource("/view/imagens/iconeFeedback.png")), jPanel6); // NOI18N
@@ -843,10 +869,164 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
                             .addComponent(txt_siapeOpcoes))
                         .addGap(206, 206, 206)
                         .addComponent(jLabel24)))
-                .addContainerGap(478, Short.MAX_VALUE))
+                .addContainerGap(493, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Opções", new javax.swing.ImageIcon(getClass().getResource("/view/imagens/iconeOpcao.png")), jPanel10); // NOI18N
+
+        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sobre o Control Lab", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Rounded MT Bold", 0, 15))); // NOI18N
+
+        txt_nomeFuncionarioAjuda1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda1.setText("Desenvolvido por:");
+
+        txt_nomeFuncionarioAjuda2.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda2.setText("Edson Magalhães");
+
+        txt_nomeFuncionarioAjuda3.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda3.setText("Layla Ferreira");
+
+        txt_nomeFuncionarioAjuda4.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda4.setText("Maria Eliana Holanda");
+
+        txt_nomeFuncionarioAjuda5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda5.setText("Orientador:");
+
+        txt_nomeFuncionarioAjuda6.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda6.setText("Rodrigo Lisbôa");
+
+        txt_nomeFuncionarioAjuda7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda7.setText("Versão:");
+
+        txt_nomeFuncionarioAjuda8.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda8.setText("1.0");
+
+        txt_nomeFuncionarioAjuda9.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda9.setText("Manual:");
+
+        txt_nomeFuncionarioAjuda10.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda10.setForeground(new java.awt.Color(0, 6, 255));
+        txt_nomeFuncionarioAjuda10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt_nomeFuncionarioAjuda10.setText("Clique Aqui");
+        txt_nomeFuncionarioAjuda10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txt_nomeFuncionarioAjuda10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_nomeFuncionarioAjuda10MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txt_nomeFuncionarioAjuda4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_nomeFuncionarioAjuda3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                            .addComponent(txt_nomeFuncionarioAjuda1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txt_nomeFuncionarioAjuda2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_nomeFuncionarioAjuda5)
+                                .addComponent(txt_nomeFuncionarioAjuda7))
+                            .addGap(52, 52, 52)
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_nomeFuncionarioAjuda6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_nomeFuncionarioAjuda8, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_nomeFuncionarioAjuda10, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(txt_nomeFuncionarioAjuda9))
+                .addContainerGap(178, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nomeFuncionarioAjuda1)
+                    .addComponent(txt_nomeFuncionarioAjuda2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_nomeFuncionarioAjuda3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_nomeFuncionarioAjuda4)
+                .addGap(43, 43, 43)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nomeFuncionarioAjuda5)
+                    .addComponent(txt_nomeFuncionarioAjuda6))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nomeFuncionarioAjuda7)
+                    .addComponent(txt_nomeFuncionarioAjuda8))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nomeFuncionarioAjuda9)
+                    .addComponent(txt_nomeFuncionarioAjuda10))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/iconeBackground.png"))); // NOI18N
+
+        jLabel31.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        jLabel31.setText("|");
+
+        txt_nomeFuncionarioAjuda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_nomeFuncionarioAjuda.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        txt_nomeFuncionarioAjuda.setText("Nome Completo do Funcionario");
+
+        txt_siapeAjuda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        txt_siapeAjuda.setText("1234567");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(jLabel30)
+                        .addContainerGap(454, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_nomeFuncionarioAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel31)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_siapeAjuda)
+                        .addGap(41, 41, 41))))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_nomeFuncionarioAjuda)
+                            .addComponent(jLabel31)
+                            .addComponent(txt_siapeAjuda))
+                        .addGap(206, 206, 206)
+                        .addComponent(jLabel30)))
+                .addContainerGap(493, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Ajuda", jPanel14);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1161,6 +1341,15 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_cancelarFeedbackActionPerformed
 
+    private void txt_nomeFuncionarioAjuda10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_nomeFuncionarioAjuda10MouseClicked
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            desktop.open(new File("manual.pdf"));
+        } catch (IOException ex) {
+            Logger.getLogger(TelaPrincipalFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_txt_nomeFuncionarioAjuda10MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1253,6 +1442,8 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1263,6 +1454,8 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
@@ -1274,11 +1467,23 @@ public class TelaPrincipalFuncionario extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPopupMenu menuFeedback;
     private javax.swing.JPopupMenu menuReserva;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda1;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda10;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda2;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda3;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda4;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda5;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda6;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda7;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda8;
+    private javax.swing.JLabel txt_nomeFuncionarioAjuda9;
     private javax.swing.JLabel txt_nomeFuncionarioCadReserva;
     private javax.swing.JLabel txt_nomeFuncionarioConsFeedback;
     private javax.swing.JLabel txt_nomeFuncionarioConsReserva;
     private javax.swing.JLabel txt_nomeFuncionarioOpcoes;
     private javax.swing.JLabel txt_nomeFuncionarioRealFeedback;
+    private javax.swing.JLabel txt_siapeAjuda;
     private javax.swing.JLabel txt_siapeCadReserva;
     private javax.swing.JLabel txt_siapeConsFeedback;
     private javax.swing.JLabel txt_siapeConsReserva;
